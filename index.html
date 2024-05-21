@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://i.ibb.co/0jbnyQ8/Amresh-pic1.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Musical world 🎻</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+        color: aliceblue;
+    }
+
+    .container {
+        width:100%; 
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #000000;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(139, 139, 139, 0.824);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #11a71b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+
+    .message {
+        text-align: center;
+    }
+    form {
+        margin: 30px auto;
+        padding: 15px;
+        background: #222; /* Dark grey background for the form */
+        border-radius: 8px;
+        width:92%; /* Adjust width as per design requirements */
+        height: 400%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle white shadow for depth */
+        text-align: center;
+        display: block;
+    }
+
+    .x{
+
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0 0 1rem rgb(0, 0, 0);
+        margin-top: 2rem;
+       
+
+    }
+    .x:hover{
+        transform: scale(1.05); /* Slight zoom on hover */
+        box-shadow: 0 8px 16px rgba(103, 103, 103, 0.3); /* Deeper shadow on hover */
+    }
+    #main{
+        color:#f0f0f0;
+         font-size:30px;
+          background:transparent;
+          text-decoration: none;
+          padding: 10px;
+          border-radius:10px;
+          width:98%; 
+    }
+    button:hover{
+        transform: scale(1.005); /* Slight zoom on hover */
+        box-shadow: 0 8px 16px rgba(103, 103, 103, 0.3); /* Deeper shadow on hover */
+        background-color: #09b923;
+    }
+    a{
+        text-decoration: none;
+
+    }
+    a:hover{
+        text-shadow: 0 0 10px white;
+    }
+    
+    @media (max-width: 768px) {
+        iframe {
+          max-width: 100%; /* Ensure iframes are responsive on smaller screens */
+          background-color: #000000;
+        }
+      }
+      /* Style for each iframe */
+  iframe {
+
+    
+    border-radius: 12px;
+    width: 100%;
+    max-width: 300px; /* Maximum width for larger screens */
+    height: 300px;
+    object-fit: cover;
+    border: none;
+    box-shadow: 0 4px 8px rgba(114, 114, 114, 0.2); /* Add shadow for a floating effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    background-color: transparent;
+    
+    
+  }
+
+  /* Hover effect */
+  iframe:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  }
+
+  .xy{
+    padding:71px;
+    text-align: center;
+    
+}
+
+    </style>
+
+<body>
+
+<div class="auth-form" id="signupForm" style="display:none;">
+    <h2>Sign Up-Musical world 🎻</h2>
+    <form onsubmit="handleSignup(event)">
+        <input type="text" id="signupName" placeholder="Name" required><br>
+        <input type="email" id="signupEmail" placeholder="Email" required><br>
+        <input type="password" id="signupPassword" placeholder="Password" required><br>
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="showLoginForm()">Log In</a></p>
+</div>
+
+<div class="auth-form" id="loginForm">
+    <h2>Log In-Musical world 🎻</h2>
+    <form onsubmit="handleLogin(event)">
+        <input type="email" id="loginEmail" placeholder="Email" required><br>
+        <input type="password" id="loginPassword" placeholder="Password" required><br>
+        <button type="submit">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="showSignupForm()">Sign Up</a></p>
+</div>
+
+<div class="user-profile" id="userProfile" style="display: none;">
+    <h2>Welcome, Dear <span id="userName"></span>!</h2>
+    <button onclick="logout()">Log Out</button>
+
+</div>
+                <button id= "main" ><a href="https://amreshbhuya.github.io/index/" style="color:#ccc" class="button"><i class="fas fa-sign-in-alt"></i> Musical world🎻</a></button>
+                <div class="song">
+                    <div id="new" class="iframe-container">
+                    <a class="xy" href="https://amreshbhuya.github.io/arijit/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/TYcX8PP/arijitsingh11650885572.webp" alt="Album Cover"></a>
+                    <a class="xy" href="https://amreshbhuya.github.io/neha/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/DRGSWX5/Neha-Kakkar-Singer-Wallpaper-18862.jpg" alt="Album Cover"></a>
+                    <a class="xy" href="https://amreshbhuya.github.io/lata/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/6RfTgX5/628cb2b7f0c19.jpg"  alt="Album Cover"></a>
+                    <a  class="xy"href="https://amreshbhuya.github.io/jubin/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/YZ90pBs/images.jpg" alt="Album Cover"></a>
+                   
+                   <a class="xy"href="https://amreshbhuya.github.io/qala/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/cw6Kcrz/qala.png" alt="Album Cover"></a>
+                    <a class="xy" href="https://amreshbhuya.github.io/party/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/4TSHzBD/istockphoto-1324006497-1024x1024.jpg" alt="Album Cover"></a>
+                    <a class="xy"href="https://amreshbhuya.github.io/bhajan/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/xMS3zRB/81-K7ptk-SNg-L-AC-UF1000-1000-QL80.jpg" alt="Album Cover"></a>
+                    <a class="xy" href="https://amreshbhuya.github.io/Krishna/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/FVyHP2C/51945901313-82aabaf6c1-b.jpg" alt="Album Cover"></a>
+                    <a class="xy"href="https://amreshbhuya.github.io/piya/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/HGBQyVJ/ab67616d0000b2739f22433ffc9ed9de826de374.jpg" alt="Album Cover"></a>
+                    <a class="xy" href="https://amreshbhuya.github.io/gangu/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/BKvwFfp/Screenshot-2024-05-19-214104.png" alt="Album Cover"></a>
+                   <a class="xy" class="x" href="https://amreshbhuya.github.io/RamLeela/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/1Jd7zxP/Screenshot-2024-05-19-215933.png" alt="Album Cover"></a>
+                  <a class="xy"href="https://amreshbhuya.github.io/love/"  rel="noopener noreferrer"><img class="x"  src="https://i.ibb.co/jVGH99d/artworks-I1-TFx-I5sf-SAps-Hy-H-l-DJn-QQ-t500x500.jpg" alt="Album Cover"></a>
+
+              <a class="xy"href="https://amreshbhuya.github.io/new1/"  rel="noopener noreferrer"><img class="x"  src="new1.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new2/"  rel="noopener noreferrer"><img class="x"  src="new2.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new3/"  rel="noopener noreferrer"><img class="x"  src="new3.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new4/"  rel="noopener noreferrer"><img class="x"  src="new4.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new5/"  rel="noopener noreferrer"><img class="x"  src="new5.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new6/"  rel="noopener noreferrer"><img class="x"  src="new6.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new7/"  rel="noopener noreferrer"><img class="x"  src="new7.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new8/"  rel="noopener noreferrer"><img class="x"  src="new8.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new9/"  rel="noopener noreferrer"><img class="x"  src="new9.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new10/"  rel="noopener noreferrer"><img class="x"  src="new10.png" alt=""></a>
+              <a class="xy" href="https://amreshbhuya.github.io/new11/"  rel="noopener noreferrer"><img class="x"  src="new11.png" alt=""></a>
+              <a class="xy"href="https://amreshbhuya.github.io/new12/"  rel="noopener noreferrer"><img class="x"  src="new12.png" alt=""></a>
+           
+                 </div>
+                </div>
+<script src="script.js"></script>
+</body>
+</html>
